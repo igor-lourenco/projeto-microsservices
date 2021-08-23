@@ -2,6 +2,7 @@ package com.devsuperior.hrworker.controllers;
 
 import java.util.List;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.hrworker.entities.Worker;
 import com.devsuperior.hrworker.repositories.WorkerRepository;
-@RestController
+
 @RefreshScope
+@RestController
 @RequestMapping(value = "/workers")
 public class WorkerController {
 	
@@ -34,7 +36,7 @@ public class WorkerController {
 	
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfigs(){
-		logger.info("CONFIG = " + testConfig);
+	logger.info("CONFIG = " + testConfig);
 		return ResponseEntity.noContent().build();
 	}
 	
